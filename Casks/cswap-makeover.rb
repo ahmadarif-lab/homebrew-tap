@@ -24,7 +24,10 @@ cask "cswap-makeover" do
 
   uninstall launchctl: "dev.ahmadarif.cswap-makeover"
 
+  # install_service.sh writes this LaunchAgent itself, outside Homebrew's
+  # bookkeeping, so zap has to name it explicitly.
   zap trash: [
+    "~/Library/LaunchAgents/dev.ahmadarif.cswap-makeover.plist",
     "~/Library/Logs/dev.ahmadarif.cswap-makeover.err",
     "~/Library/Logs/dev.ahmadarif.cswap-makeover.log",
     "~/Library/Saved Application State/dev.ahmadarif.cswap-makeover.savedState",
