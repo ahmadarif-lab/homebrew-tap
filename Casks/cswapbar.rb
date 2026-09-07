@@ -20,6 +20,11 @@ cask "cswapbar" do
         writable_paths: ["CSwapBar.app"],
         writable_base:  :appdir,
         must_succeed:   false
+
+    # Register the LaunchAgent so the menu bar icon is there right after
+    # install, without a follow-up command.
+    run "/Applications/CSwapBar.app/Contents/Resources/install_service.sh",
+        must_succeed: false
   end
 
   uninstall launchctl: "dev.ahmadarif.cswapbar"
