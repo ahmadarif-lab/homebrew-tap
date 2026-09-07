@@ -18,7 +18,10 @@ cask "video-trimmer" do
   # makes `brew install` a one-step install instead of sending people to Terminal.
   postflight_steps do
     run "/usr/bin/xattr",
-        args: ["-dr", "com.apple.quarantine", "#{appdir}/Video Trimmer.app"]
+        args:           ["-dr", "com.apple.quarantine", "/Applications/Video Trimmer.app"],
+        writable_paths: ["Video Trimmer.app"],
+        writable_base:  :appdir,
+        must_succeed:   false
   end
 
   zap trash: [
