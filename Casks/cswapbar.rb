@@ -1,6 +1,6 @@
 cask "cswapbar" do
-  version "1.0.2"
-  sha256 "7d461fe794f37e1ea7c26ead188c3ded7f465b67f16e851e2db188d7782f793b"
+  version "1.1.0"
+  sha256 "66f23d7f5388e4207404c1e116c7299641c31bd1639a51fc95d13e2282ea22ac"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
@@ -21,20 +21,19 @@ cask "cswapbar" do
         writable_base:  :appdir,
         must_succeed:   false
 
-    # Register the LaunchAgent so the menu bar icon is there right after
-    # install, without a follow-up command.
-    run "/Applications/CSwapBar.app/Contents/Resources/install_service.sh",
+    # Launch it so the menu bar icon appears immediately; on its first run
+    # the app registers itself as a login item via SMAppService. Registering
+    # a LaunchAgent from here instead does not work -- postflight is
+    # sandboxed and launchctl fails with "Load failed: 5: I/O error".
+    run "/usr/bin/open",
+        args:         ["-a", "/Applications/CSwapBar.app"],
         must_succeed: false
   end
 
-  uninstall launchctl: "dev.ahmadarif.cswapbar"
+  uninstall quit: "dev.ahmadarif.cswapbar"
 
-  # install_service.sh writes this LaunchAgent itself, outside Homebrew's
-  # bookkeeping, so zap has to name it explicitly.
   zap trash: [
-    "~/Library/LaunchAgents/dev.ahmadarif.cswapbar.plist",
-    "~/Library/Logs/dev.ahmadarif.cswapbar.err",
-    "~/Library/Logs/dev.ahmadarif.cswapbar.log",
+    "~/Library/Preferences/dev.ahmadarif.cswapbar.plist",
     "~/Library/Saved Application State/dev.ahmadarif.cswapbar.savedState",
   ]
 
@@ -42,7 +41,7 @@ cask "cswapbar" do
     CSwapBar drives the `cswap` CLI, which is not a Homebrew package. Install it with:
       uv tool install claude-swap    # or: pipx install claude-swap
 
-    To start CSwapBar at login:
-      /Applications/CSwapBar.app/Contents/Resources/install_service.sh
+    It starts at login from its first launch. Turn that off from "Start at login"
+    in the menu, or System Settings > General > Login Items.
   EOS
 end
