@@ -1,11 +1,11 @@
-cask "cswap-makeover" do
-  version "1.0.1"
-  sha256 "a1f983aed99e89817c17be375a62e2fcf80c998770c0429186d7f7b0290b8a08"
+cask "cswapbar" do
+  version "1.0.2"
+  sha256 "7d461fe794f37e1ea7c26ead188c3ded7f465b67f16e851e2db188d7782f793b"
 
-  url "https://github.com/ahmadarif-lab/cswap-makeover/releases/download/v#{version}/CSwapBar.dmg"
+  url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
   desc "Menu bar app for claude-swap: per-account usage bars and one-click switching"
-  homepage "https://github.com/ahmadarif-lab/cswap-makeover"
+  homepage "https://github.com/ahmadarif-lab/cswapbar"
 
   depends_on macos: :sonoma
 
@@ -22,15 +22,15 @@ cask "cswap-makeover" do
         must_succeed:   false
   end
 
-  uninstall launchctl: "dev.ahmadarif.cswap-makeover"
+  uninstall launchctl: "dev.ahmadarif.cswapbar"
 
   # install_service.sh writes this LaunchAgent itself, outside Homebrew's
   # bookkeeping, so zap has to name it explicitly.
   zap trash: [
-    "~/Library/LaunchAgents/dev.ahmadarif.cswap-makeover.plist",
-    "~/Library/Logs/dev.ahmadarif.cswap-makeover.err",
-    "~/Library/Logs/dev.ahmadarif.cswap-makeover.log",
-    "~/Library/Saved Application State/dev.ahmadarif.cswap-makeover.savedState",
+    "~/Library/LaunchAgents/dev.ahmadarif.cswapbar.plist",
+    "~/Library/Logs/dev.ahmadarif.cswapbar.err",
+    "~/Library/Logs/dev.ahmadarif.cswapbar.log",
+    "~/Library/Saved Application State/dev.ahmadarif.cswapbar.savedState",
   ]
 
   caveats <<~EOS
