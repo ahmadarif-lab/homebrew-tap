@@ -1,6 +1,6 @@
 cask "video-trimmer" do
-  version "1.2.2"
-  sha256 "a1b0eec55c80cf35f2a6af0e12d0f0cc5ffc2368b9eb8cdecc5e8fb1b500ff83"
+  version "1.3.0"
+  sha256 "b1718a524c6830e8091eb0ab5facf06e388bd55b44cfd740ee5541473b55b336"
 
   url "https://github.com/ahmadarif-lab/video-trimmer/releases/download/v#{version}/VideoTrimmer.dmg"
   name "Video Trimmer"
