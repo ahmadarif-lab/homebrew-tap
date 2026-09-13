@@ -10,6 +10,18 @@ brew tap ahmadarif-lab/tap
 
 ## Available casks
 
+### Transcriber
+
+A native macOS app that turns video or audio into text, subtitles and burned-in captions.
+See [ahmadarif-lab/transcriber](https://github.com/ahmadarif-lab/transcriber).
+
+```sh
+brew install --cask ahmadarif-lab/tap/transcriber
+```
+
+The cask pulls in `ffmpeg` and `whisper-cpp`, which the app drives. Speech models are downloaded
+from inside the app on first use.
+
 ### Video Trimmer
 
 A native macOS app for cutting unwanted stretches out of a video.
