@@ -1,10 +1,10 @@
 cask "cswapbar" do
-  version "2.0.0"
-  sha256 "5cfe4f4074d4506d4fb66ec8d17ecdd004a8732d6850a90b877f1549a6107b22"
+  version "1.3.1"
+  sha256 "6e1ebb4d1c05e36529effacaeaa72cfd63b9e3ccc750be555eb53541ef7f77d1"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
-  desc "Menu bar app for Claude Code accounts: usage bars and one-click switching"
+  desc "Menu bar app for claude-swap: per-account usage bars and one-click switching"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
   depends_on macos: :sonoma
@@ -38,6 +38,9 @@ cask "cswapbar" do
   ]
 
   caveats <<~EOS
+    CSwapBar drives the `cswap` CLI, which is not a Homebrew package. Install it with:
+      uv tool install claude-swap    # or: pipx install claude-swap
+
     It starts at login from its first launch. Turn that off from "Start at login"
     in the menu, or System Settings > General > Login Items.
   EOS
