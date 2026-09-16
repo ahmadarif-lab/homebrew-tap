@@ -1,13 +1,13 @@
 cask "cswapbar" do
-  version "2.0.0"
-  sha256 "51076057d60eef1bafec3c2de76c6ef5a3c7982914c4cb74dee1ff3af1bfba88"
+  version "2.0.1"
+  sha256 "8b77fffe5b97fc422788ba361da3be60cdef99aa55bec30b8c686ba7a7fec091"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
   desc "Menu bar app for Claude Code accounts: usage bars and one-click switching"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
-  depends_on macos: :sonoma
+  depends_on macos: ">= :sonoma"
 
   app "CSwapBar.app"
 
