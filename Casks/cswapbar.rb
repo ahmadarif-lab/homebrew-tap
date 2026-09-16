@@ -7,7 +7,7 @@ cask "cswapbar" do
   desc "Menu bar app for Claude Code accounts: usage bars and one-click switching"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "CSwapBar.app"
 
