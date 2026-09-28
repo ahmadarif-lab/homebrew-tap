@@ -33,3 +33,16 @@ brew install --cask ahmadarif-lab/tap/video-trimmer
 
 The app is ad-hoc signed rather than notarized, so the cask clears the quarantine flag after
 installing. Without that, Gatekeeper would refuse the first launch.
+
+### StatBar
+
+A native macOS menu bar system monitor in the spirit of iStat Menus: CPU, GPU, memory, network,
+disks, battery and temperatures.
+See [ahmadarif-lab/statbar](https://github.com/ahmadarif-lab/statbar).
+
+```sh
+brew install --cask ahmadarif-lab/tap/statbar
+```
+
+The app is ad-hoc signed rather than notarized, so the cask clears the quarantine flag after
+installing, then launches it; it starts at login from that first run.
