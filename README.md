@@ -45,4 +45,4 @@ brew install --cask ahmadarif-lab/tap/statbar
 ```
 
 The app is ad-hoc signed rather than notarized, so the cask clears the quarantine flag after
-installing, then launches it; it starts at login from that first run.
+installing. Open it from Applications once; it starts at login from then on.

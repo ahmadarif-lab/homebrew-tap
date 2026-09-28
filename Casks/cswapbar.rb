@@ -20,14 +20,6 @@ cask "cswapbar" do
         writable_paths: ["CSwapBar.app"],
         writable_base:  :appdir,
         must_succeed:   false
-
-    # Launch it so the menu bar icon appears immediately; on its first run
-    # the app registers itself as a login item via SMAppService. Registering
-    # a LaunchAgent from here instead does not work -- postflight is
-    # sandboxed and launchctl fails with "Load failed: 5: I/O error".
-    run "/usr/bin/open",
-        args:         ["-a", "/Applications/CSwapBar.app"],
-        must_succeed: false
   end
 
   uninstall quit: "dev.ahmadarif.cswapbar"
@@ -38,7 +30,8 @@ cask "cswapbar" do
   ]
 
   caveats <<~EOS
-    It starts at login from its first launch. Turn that off from "Start at login"
-    in the menu, or System Settings > General > Login Items.
+    Open CSwapBar from Applications to start it. It starts at login from that
+    first launch; turn that off from "Start at login" in the menu, or System
+    Settings > General > Login Items.
   EOS
 end

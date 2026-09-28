@@ -20,12 +20,6 @@ cask "statbar" do
         writable_paths: ["StatBar.app"],
         writable_base:  :appdir,
         must_succeed:   false
-
-    # Launch it so the menu bar readouts appear immediately; on its first run
-    # the app registers itself as a login item via SMAppService.
-    run "/usr/bin/open",
-        args:         ["-a", "/Applications/StatBar.app"],
-        must_succeed: false
   end
 
   uninstall quit: "dev.ahmadarif.statbar"
@@ -36,7 +30,8 @@ cask "statbar" do
   ]
 
   caveats <<~EOS
-    It starts at login from its first launch. Turn that off under
-    Settings > General > Start at login, or System Settings > General > Login Items.
+    Open StatBar from Applications to start it. It starts at login from that
+    first launch; turn that off under Settings > General > Start at login, or
+    System Settings > General > Login Items.
   EOS
 end
