@@ -1,6 +1,6 @@
 cask "statbar" do
-  version "0.1.1"
-  sha256 "4e8b46d43bc8d2b2d91867afc8b306af3d11adf48c7b3cb84975b5c190f12db5"
+  version "0.1.2"
+  sha256 "812e2047d0f4178eaf09f5692493de5639e76b02645acefffe4d6d4f072f7d3a"
 
   url "https://github.com/ahmadarif-lab/statbar/releases/download/v#{version}/StatBar.dmg"
   name "StatBar"
