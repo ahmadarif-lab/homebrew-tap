@@ -4,7 +4,7 @@ cask "cswapbar" do
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
-  desc "Menu bar app for Claude, Antigravity and z.ai quota: usage bars and one-click account switching"
+  desc "Menu bar quota tracker for Claude Code, Antigravity and z.ai"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
   depends_on macos: :sonoma
