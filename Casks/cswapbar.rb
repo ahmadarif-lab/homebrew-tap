@@ -1,6 +1,6 @@
 cask "cswapbar" do
-  version "2.1.3"
-  sha256 "57bb9e59a0e3915603de4fdb683e0abbee7ff26a9a9aa76446031bf0eb03f2d9"
+  version "2.1.4"
+  sha256 "ce96fa508496c14573f1c1596fa61239669fab5011c78c100446ac09a55e93b0"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
