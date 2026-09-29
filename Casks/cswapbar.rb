@@ -1,10 +1,10 @@
 cask "cswapbar" do
-  version "2.2.1"
-  sha256 "fdf1034e64ce94db4cf9f39f3b8e89c35f9be20ff66097aafa0e4388d071948a"
+  version "2.3.0"
+  sha256 "394b1f4f263a3fd8968ec91766593ebe34b72aac88e337c7a45f7a26d86cdcf4"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
-  desc "Menu bar quota tracker for Claude Code, Antigravity and z.ai"
+  desc "Menu bar quota tracker for Claude Code, Antigravity, z.ai and DeepSeek"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
   depends_on macos: :sonoma
