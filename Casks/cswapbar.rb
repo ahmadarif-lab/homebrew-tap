@@ -1,10 +1,10 @@
 cask "cswapbar" do
-  version "2.0.2"
-  sha256 "839d458d91985901812dd3268956394b5760839f9e503011a0df5832b3f598fb"
+  version "2.1.0"
+  sha256 "81984e913d0c8c012e67aba5d1901d29a9bbc093651d1a55250dc7c5e8c8431e"
 
   url "https://github.com/ahmadarif-lab/cswapbar/releases/download/v#{version}/CSwapBar.dmg"
   name "CSwapBar"
-  desc "Menu bar app for Claude Code accounts: usage bars and one-click switching"
+  desc "Menu bar app for Claude, Antigravity and z.ai quota: usage bars and one-click account switching"
   homepage "https://github.com/ahmadarif-lab/cswapbar"
 
   depends_on macos: :sonoma
