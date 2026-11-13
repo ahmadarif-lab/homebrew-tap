@@ -1,6 +1,6 @@
 cask "duebar" do
-  version "0.1.0"
-  sha256 "3140bb023d21fd09bb4c3128e8c267cd0d6d284af0c4e7ed454bd965af63c1ea"
+  version "0.1.1"
+  sha256 "02971eeaa751f846d21aeec21d5598dc0b48dc3f8eae75effcefca6f47811996"
 
   url "https://github.com/ahmadarif-lab/duebar/releases/download/v#{version}/DueBar.dmg"
   name "DueBar"
