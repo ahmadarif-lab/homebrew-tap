@@ -34,6 +34,18 @@ brew install --cask ahmadarif-lab/tap/video-trimmer
 The app is ad-hoc signed rather than notarized, so the cask clears the quarantine flag after
 installing. Without that, Gatekeeper would refuse the first launch.
 
+### VaultBar
+
+A native macOS menu bar client for Bitwarden-compatible vaults: search, copy, live 2FA codes and
+auto-type, with no `bw` CLI. See [ahmadarif-lab/vaultbar](https://github.com/ahmadarif-lab/vaultbar).
+
+```sh
+brew install --cask ahmadarif-lab/tap/vaultbar
+```
+
+The app is ad-hoc signed rather than notarized, so the cask clears the quarantine flag after
+installing.
+
 ### StatBar
 
 A native macOS menu bar system monitor in the spirit of iStat Menus: CPU, GPU, memory, network,
